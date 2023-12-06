@@ -1,9 +1,112 @@
 body {
     background-color: lightgray;
+    margin: 10; 
+    padding: 10; 
   }
 
 h1 {
-  font-family:'Segoe UI';
-  font-size:  16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:  25px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 20px;
 
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:  25px;
+    font-weight: bold;
+    text-decoration: underline;
+    
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:  25px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    
+}
+
+
+section {
+    margin-top: 10px;
+    margin-bottom: 0px; 
+    padding: 35px;
+    
+}
+
+p {
+    line-height: 1.5;
+}
+
+.styled-block {
+    border: 2px solid #333;
+    padding: 20px; 
+    margin-bottom: 20px; 
+    background-color: #f0f0f0; 
+    color: #333; 
+    border-radius: 8px;
+}
+
+#skills li {
+    display: inline-block; 
+    width: 80px; 
+    margin-right: 10px; 
+    border: 2px solid #333;
+    margin-bottom: 0px;
+    background-color: #f0f0f099;
+    color: #333;
+    border-radius: 5px;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    box-shadow: 4px 4px 4px rgba(5, 21, 146, 0.2);
+}
+
+label {
+    font-weight: bold;
+}
+
+
+form input, form textarea {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+form button:hover {
+    background-color: #45a049;
+}
+
+#messages li {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    list-style-type: none;
+}
+
+footer {
+    padding: 20px; /* Adjust the padding as needed */
+    background-color: #333; /* Change the background color */
+    color: white; /* Set text color */
+    text-align: center; /* Center text in the footer */
 }
