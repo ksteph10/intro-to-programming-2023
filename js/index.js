@@ -3,7 +3,8 @@ var thisYear = today.getFullYear();
 var skills = [
     'JavaScript',
     'GitHub',
-    'Excel',
+    'CSS',
+    'HTML'
 
 ];
 
