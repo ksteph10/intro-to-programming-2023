@@ -58,8 +58,26 @@ messageForm.addEventListener('submit', function(event) {
     messageList.append(newMessage);
     newMessage.appendChild(removeButton);
     event.target.reset();
-
-
    
 });
     
+var githubRequest = new XMLHttpRequest();
+
+githubRequest.open('GET', 'https://api.github.com/users/ksteph10/repos');
+githubRequest.send();
+
+githubRequest.addEventListener('load', function(event) {
+    var repositories = JSON.parse(this.response)
+    console.log(repositories); 
+
+    var projectSection = document.getElementById("projects")
+    var projectList = projectSection.querySelector("ul")
+
+    for (var index = 0; index<repositories.length; index++) {
+         var project = document.createElement("li");
+         project.innerText = repositories[index]["name"]
+         projectList.appendChild(project);
+    }
+});
+
+
