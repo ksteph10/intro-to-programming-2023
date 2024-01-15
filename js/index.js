@@ -60,24 +60,27 @@ messageForm.addEventListener('submit', function(event) {
     event.target.reset();
    
 });
+List.appendChild(project);
     
-var githubRequest = new XMLHttpRequest();
+fetch('https://api.github.com/users/ksteph10/repos')
+  .then(function (response) {return response.json()})
+    
+  
+  .then(repositories => 
+    { //console.log(data);
+      // var repositories = JSON.parse(data)
+  console.log(repositories); 
 
-githubRequest.open('GET', 'https://api.github.com/users/ksteph10/repos');
-githubRequest.send();
+  var projectSection = document.getElementById("projects")
+  var projectList = projectSection.querySelector("ul")
 
-githubRequest.addEventListener('load', function(event) {
-    var repositories = JSON.parse(this.response)
-    console.log(repositories); 
+  for (var index = 0; index<repositories.length; index++) {
+       var project = document.createElement("li");
+       project.innerText = repositories[index]["name"]
+       projectList.appendChild(project);
+  }
+  
+    })
 
-    var projectSection = document.getElementById("projects")
-    var projectList = projectSection.querySelector("ul")
-
-    for (var index = 0; index<repositories.length; index++) {
-         var project = document.createElement("li");
-         project.innerText = repositories[index]["name"]
-         projectList.appendChild(project);
-    }
-});
-
+  
 
