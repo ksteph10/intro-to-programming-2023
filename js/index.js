@@ -60,7 +60,7 @@ messageForm.addEventListener('submit', function(event) {
     event.target.reset();
    
 });
-List.appendChild(project);
+//List.appendChild(project);
     
 fetch('https://api.github.com/users/ksteph10/repos')
   .then(function (response) {return response.json()})
