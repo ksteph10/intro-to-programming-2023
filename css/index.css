@@ -123,6 +123,10 @@ nav {
     margin: 0 15px;
   }
 
+  nav a:hover {
+    border-bottom: 2px solid teal; 
+}
+
   .main-heading {
     display: flex;
     flex-wrap: wrap;
@@ -153,8 +157,24 @@ nav {
   @media screen and (min-width: 768px) {
     .experience {
       width: 31%; 
-
+    }
   @media screen and (min-width: 1024px) {
     .experience {
       width: 23%; 
     }
+
+    }
+  }
+
+.social-media {
+  margin-top: 20px; 
+}
+.github-link {
+  color: #ffffff; 
+  font-size: 30px; 
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: #0e0f0e; 
+}

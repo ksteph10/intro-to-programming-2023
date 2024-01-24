@@ -63,24 +63,26 @@ messageForm.addEventListener('submit', function(event) {
 //List.appendChild(project);
     
 fetch('https://api.github.com/users/ksteph10/repos')
-  .then(function (response) {return response.json()})
-    
-  
-  .then(repositories => 
-    { //console.log(data);
-      // var repositories = JSON.parse(data)
-  console.log(repositories); 
+  .then(function (response) {
+    return response.json(); 
+})
 
-  var projectSection = document.getElementById("projects")
-  var projectList = projectSection.querySelector("ul")
+  .then(repositories => { 
+  var projectSection = document.getElementById("projects");
+  var projectList = projectSection.querySelector("ul");
 
-  for (var index = 0; index<repositories.length; index++) {
+  for (var index = 0; index < repositories.length; index++) {
        var project = document.createElement("li");
-       project.innerText = repositories[index]["name"]
+       var projectLink = document.createElement("a");
+
+       projectLink.href = repositories[index]["html_url"];
+       projectLink.target = "_blank";
+       project.innerText = repositories[index]["name"];
+       
+       project.appendChild(projectLink);
        projectList.appendChild(project);
   }
   
-    })
-
-  
+    });
+    
 
