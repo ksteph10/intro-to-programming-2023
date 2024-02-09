@@ -1,6 +1,6 @@
-var today = new Date();
-var thisYear = today.getFullYear();
-var skills = [
+const today = new Date();
+const thisYear = today.getFullYear();
+const skills = [
     'JavaScript',
     'GitHub',
     'CSS',
@@ -22,7 +22,7 @@ const skillsSection = document.querySelector('#skills');
 
 
 for (let i = 0; i < skills.length; i++) {
-    var skill = document.createElement('li');
+    const skill = document.createElement('li');
     skill.innerText = skills[i];
     skillsSection.appendChild(skill);
 
@@ -68,12 +68,12 @@ fetch('https://api.github.com/users/ksteph10/repos')
 })
 
   .then(repositories => { 
-  var projectSection = document.getElementById("projects");
-  var projectList = projectSection.querySelector("ul");
+  const projectSection = document.getElementById("projects");
+  const projectList = projectSection.querySelector("ul");
 
   for (var index = 0; index < repositories.length; index++) {
-       var project = document.createElement("li");
-       var projectLink = document.createElement("a");
+       const project = document.createElement("li");
+       const projectLink = document.createElement("a");
 
        projectLink.href = repositories[index]["html_url"];
        projectLink.target = "_blank";
